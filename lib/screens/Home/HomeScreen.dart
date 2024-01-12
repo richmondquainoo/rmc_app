@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kBackgroundTheme,
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: MAIN_COLOR,
@@ -234,16 +235,304 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.black,
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.002),
-              Container(
-                height: 140,
-                color: Colors.red,
-                child: Column(
-                  children: [
+              SizedBox(height: MediaQuery.of(context).size.height * 0.015),
+              Text(
+                'Latest',
+                style: GoogleFonts.raleway(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black54,
+                ),
+              ),
+              Card(
+                child: Container(
+                  // height: 80,
+                  width: MediaQuery.of(context).size.width*0.5,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color:Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 4.0),
+                        child: Center(
+                          child: Image.asset("assets/images/flier.png")
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 18.0,right: 18),
+                        child: MaterialButton(
+                          onPressed: () {
+                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashboardDetails()));
 
+                          },
+                          height: 25,
+                          elevation: 2,
+                          splashColor: Colors.yellow[700],
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(3)),
+                          color: Colors.amber,
+                          child: Center(
+                            child: Text(
+                              "Read More",
+                              style: GoogleFonts.raleway(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.015),
+              Text(
+                'Upcoming Events',
+                style: GoogleFonts.raleway(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black54,
+                ),
+              ),
+              Container(
+                height: 170,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          // height: 80,
+                          width: MediaQuery.of(context).size.width*0.5,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color:Colors.red,
+                          ),
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Image.asset(
+                                "assets/images/eventFlier.png",
+                                  fit: BoxFit.cover,
+                                  color: Colors.black.withOpacity(0.3),
+                                  colorBlendMode: BlendMode.darken,
+                                ),
+                              ),
+                              SizedBox(
+                                height: MediaQuery.of(context).size.height * 0.25,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 50,
+                                    vertical: 220,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: BLACK_COLOR.withOpacity(0.25),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Shout for Joy",
+                                      style: GoogleFonts.raleway(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                        letterSpacing: 0.3,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 3,
+                                    ),
+                                    Text(
+                                      "Resurrection Methodist",
+                                      style: GoogleFonts.raleway(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                        letterSpacing: 0.3,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 3,
+                                    ),
+                                    Text(
+                                      "11 Nov 2024 | 4pm GMT",
+                                      style: GoogleFonts.raleway(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                        letterSpacing: 0.3,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.015),
+              Text(
+                'Actions',
+                style: GoogleFonts.raleway(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black54,
+                ),
+              ),
+              Container(
+                height: 120,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            // height: 80,
+                            width: MediaQuery.of(context).size.width*0.5,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color:Colors.red,
+                            ),
+                            child: Stack(
+                              fit: StackFit.expand,
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Image.asset(
+                                    "assets/images/offering.png",
+                                    fit: BoxFit.cover,
+                                    color: Colors.black.withOpacity(0.3),
+                                    colorBlendMode: BlendMode.darken,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: MediaQuery.of(context).size.height * 0.25,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 50,
+                                      vertical: 220,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: BLACK_COLOR.withOpacity(0.45),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+
+                                    children: [
+                                      Text(
+                                        "Give",
+                                        style: GoogleFonts.raleway(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.white,
+                                          letterSpacing: 0.3,
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    ),
+                    Expanded(
+                        child: Card(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              // height: 80,
+                              width: MediaQuery.of(context).size.width*0.5,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color:Colors.red,
+                              ),
+                              child: Stack(
+                                fit: StackFit.expand,
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Image.asset(
+                                      "assets/images/testimony.png",
+                                      fit: BoxFit.cover,
+                                      color: Colors.black.withOpacity(0.45),
+                                      colorBlendMode: BlendMode.darken,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: MediaQuery.of(context).size.height * 0.25,
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 50,
+                                        vertical: 220,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: BLACK_COLOR.withOpacity(0.25),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+
+                                      children: [
+                                        Text(
+                                          "Testimonies",
+                                          style: GoogleFonts.raleway(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white,
+                                            letterSpacing: 0.3,
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                    ),
                   ],
                 ),
-              )
+              ),
+
+
+
 
 
             ],
