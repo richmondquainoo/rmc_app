@@ -35,3 +35,4 @@ const NEW_PRIMARY_COLOR = Color(0xFF2F2E41);
 const MAIN_COLOR = Color(0xFF2b32c4);
 const MAIN_COLOR2 = Color(0xd82027bb);
 const LIGHT_MAIN_COLOR = Color(0xFF405ced);
+const NAVBAR_BACKGROUND_COLOR = Color(0xFFe7eaf3);

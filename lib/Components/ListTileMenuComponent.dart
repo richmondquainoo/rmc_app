@@ -27,7 +27,7 @@ class ListTileMenuComponent extends StatelessWidget {
             child: Text(
               label!,
               style: GoogleFonts.raleway(
-                  fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white),
+                  fontSize: 16, fontWeight: FontWeight.w700, color: Colors.white),
             ),
           ),
         ],

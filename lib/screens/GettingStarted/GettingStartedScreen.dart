@@ -31,7 +31,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
           Image.asset(
             "assets/images/backgroundImg.png",
             fit: BoxFit.cover,
-            color: Colors.black.withOpacity(0.5),
+            color: Colors.black.withOpacity(0.7),
             colorBlendMode: BlendMode.darken,
           ),
           SizedBox(
@@ -59,10 +59,10 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                 Container(
                   child: Center(
                     child: Text(
-                      "RMC App",
-                      style: GoogleFonts.amethysta(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w800,
+                      "Resurrection Methodist Church",
+                      style: GoogleFonts.raleway(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w400,
                         color: Colors.white,
                         letterSpacing: 0.3,
                       ),
@@ -113,7 +113,7 @@ class BottomButton extends StatelessWidget {
                             fontSize: 15,
                             color: Colors.white,
                             height: 1.5,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w600),
                         textAlign: TextAlign.justify,
                       ),
                     ),

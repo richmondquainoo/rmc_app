@@ -5,6 +5,8 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../Components/TextButtonComponent.dart';
 import '../../Constants/myColors.dart';
+import '../Home/HomeScreen.dart';
+import '../Index/Index.dart';
 
 
 class VerificationScreen extends StatefulWidget {
@@ -127,10 +129,10 @@ class _VerificationScreenState extends State<VerificationScreen> {
               child: InkWell(
                 splashColor: Colors.grey,
                 onTap: (){
-                  // Navigator.pushReplacement(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => const HomeScreen()));
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Index()));
                 },
                 child: const TextButtonComponent(
                   fontSize: 20,
