@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:avatar_glow/avatar_glow.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 import '../../Components/ListTileMenuComponent.dart';
 import '../../Constants/myColors.dart';
 
@@ -19,14 +19,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: MAIN_COLOR,
         elevation: 0.2,
         title: Text(
           "Home",
           style: GoogleFonts.raleway(
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Colors.black,
+            color: Colors.white,
             letterSpacing: .75,
           ),
         ),
@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Image.asset("assets/images/rmcLogo.png"),
           )
         ],
+
       ),
       drawer: Drawer(
         child: Material(
@@ -44,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Expanded(
                 child: ListView(
+                shrinkWrap: true,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   children: <Widget>[
                     DrawerHeader(
@@ -219,21 +221,33 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body:  SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 15.0,top: 13),
-              child: Text(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            crossAxisAlignment:  CrossAxisAlignment.stretch,
+            children: [
+              Text(
                  'Welcome, Richie',
                 style: GoogleFonts.raleway(
                   fontSize: 17,
                   fontWeight: FontWeight.w700,
                   color: Colors.black,
-
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: MediaQuery.of(context).size.height * 0.002),
+              Container(
+                height: 140,
+                color: Colors.red,
+                child: Column(
+                  children: [
+
+                  ],
+                ),
+              )
+
+
+            ],
+          ),
         ),
       ),
     );

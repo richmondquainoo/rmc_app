@@ -85,7 +85,7 @@ class _IndexState extends State<Index> {
             ),
             SalomonBottomBarItem(
               icon: Icon(Icons.currency_exchange_rounded),
-              title: Text("Donations"),
+              title: Text("Give"),
               selectedColor: Colors.black,
             ),
             SalomonBottomBarItem(
