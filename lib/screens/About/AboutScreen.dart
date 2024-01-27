@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rmcapp/screens/About/ChurchBeliefs.dart';
 
 import '../../Components/TextButtonComponent.dart';
 import '../../Constants/myColors.dart';
@@ -44,6 +45,7 @@ class _AboutScreenState extends State<AboutScreen> {
               InkWell(
                 splashColor: Colors.grey,
                 onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ChurchBelief()));
 
                 },
                 child: const TextButtonComponent(
