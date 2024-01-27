@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:rmcapp/screens/Announcement/AnnouncementScreen.dart';
 import 'package:rmcapp/screens/Organizations/OrganizationScreen.dart';
 import '../../Components/settingCardComponent.dart';
 import '../../Constants/myColors.dart';
+import '../About/AboutScreen.dart';
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
@@ -204,51 +206,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     leadingIcon: Icons.speaker_group_rounded,
                     bgIconColor: Colors.amber,
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => OrderScreen(
-                      //       showBackButton: true,
-                      //     ),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AnnouncementScreen(
+                          ),
+                        ),
+                      );
                     },
                   ),
-                ]),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 14.0, right: 14,bottom: 0),
-              child: Container(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Theme.of(context).cardColor,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Theme.of(context).shadowColor.withOpacity(0.1),
-                      spreadRadius: 1,
-                      blurRadius: 1,
-                      offset: const Offset(0, 1), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Column(children: [
-                  // SettingCardComponent(
-                  //   title: "Favorites",
-                  //   leadingIcon: Icons.favorite_border,
-                  //   bgIconColor: Colors.amber,
-                  //   onTap: () {
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //         builder: (context) => FavoritesScreen(
-                  //           showBackButton: false,
-                  //         ),
-                  //       ),
-                  //     );
-                  //   },
-                  // ),
                 ]),
               ),
             ),
@@ -302,8 +268,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     leadingIcon: Icons.info_rounded,
                     bgIconColor: Colors.amber,
                     onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) => AboutScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => AboutScreen()));
                     },
                   ),
                 ]),
