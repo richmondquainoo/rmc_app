@@ -46,6 +46,8 @@ dev_dependencies:
   pin_code_fields: ^7.4.0
   salomon_bottom_bar: ^3.3.1
   cached_network_image:
+  youtube_player_flutter: ^8.1.2
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

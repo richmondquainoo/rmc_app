@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:rmcapp/screens/Organizations/OrganizationScreen.dart';
 import '../../Components/ListTileMenuComponent.dart';
 import '../../Constants/myColors.dart';
 
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundTheme,
+      backgroundColor: kPrimaryCardBackground,
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: MAIN_COLOR,
@@ -110,14 +111,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       iconColor: Colors.amber,
                       onTap: () {
                         // Navigator.pop(context);
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => CategoryScreen(
-                        //       showBackButton: true,
-                        //     ),
-                        //   ),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const OrganizationScreen(
+                              // showBackButton: true,
+                            ),
+                          ),
+                        );
                       },
                     ),
                     ListTileMenuComponent(
@@ -267,12 +268,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashboardDetails()));
 
                           },
-                          height: 25,
+                          height: 30,
                           elevation: 2,
-                          splashColor: Colors.yellow[700],
+                          splashColor: Colors.blueAccent,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(3)),
-                          color: Colors.amber,
+                          color: Colors.blueAccent,
                           child: Center(
                             child: Text(
                               "Read More",
@@ -420,13 +421,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Image.asset(
-                                    "assets/images/offering.png",
-                                    fit: BoxFit.cover,
-                                    color: Colors.black.withOpacity(0.3),
-                                    colorBlendMode: BlendMode.darken,
-                                  ),
+                                    color: Colors.teal
+                                  )
                                 ),
                                 SizedBox(
                                   height: MediaQuery.of(context).size.height * 0.25,
@@ -447,12 +443,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                     children: [
                                       Text(
-                                        "Give",
+                                        "GIVE",
                                         style: GoogleFonts.raleway(
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.white,
-                                          letterSpacing: 0.3,
+                                          letterSpacing: 0.37,
                                         ),
                                       ),
 
@@ -482,12 +478,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    child: Image.asset(
-                                      "assets/images/testimony.png",
-                                      fit: BoxFit.cover,
-                                      color: Colors.black.withOpacity(0.45),
-                                      colorBlendMode: BlendMode.darken,
+                                      color: Colors.blue
                                     ),
                                   ),
                                   SizedBox(
@@ -509,12 +500,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                       children: [
                                         Text(
-                                          "Testimonies",
+                                          "TESTIMONIES",
                                           style: GoogleFonts.raleway(
-                                            fontSize: 16,
+                                            fontSize: 18,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.white,
-                                            letterSpacing: 0.3,
+                                            letterSpacing: 0.7,
                                           ),
                                         ),
 

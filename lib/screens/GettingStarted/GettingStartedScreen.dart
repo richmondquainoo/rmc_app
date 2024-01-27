@@ -105,10 +105,9 @@ class BottomButton extends StatelessWidget {
                   Expanded(
                     child: Container(
                       child: Text(
-                        "Never miss out on important church events, programs, or updates. Check our interactive calendar regularly to stay "
+                        "Never miss out on important church events, programs, or updates. Stay "
                             "informed about upcoming services, gatherings, and exciting opportunities to engage with the church community. "
-                            "Be the first to know about any changes or exciting news happening within our church family."
-                            '!',
+                            "Be the first to know about any exciting news happening within our church family.",
                         style: GoogleFonts.raleway(
                             fontSize: 15,
                             color: Colors.white,
