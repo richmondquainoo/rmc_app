@@ -59,7 +59,7 @@ class TextButtonComponent extends StatelessWidget {
             ),
             child: Text(
               label!,
-              style: GoogleFonts.lato(
+              style: GoogleFonts.raleway(
                 fontSize: fontSize ?? 21,
                 fontWeight: fontWeight ?? FontWeight.w500,
                 letterSpacing: 0.1,

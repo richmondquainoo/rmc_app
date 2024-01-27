@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../Components/TextButtonComponent.dart';
 import '../../Constants/myColors.dart';
 import 'package:google_fonts/google_fonts.dart';
 class AboutScreen extends StatefulWidget {
@@ -19,12 +20,12 @@ class _AboutScreenState extends State<AboutScreen> {
         elevation: 0.2,
         automaticallyImplyLeading: true,
         title: Text(
-          "Resurrection Methodist Church",
+          "Resurrection Methodist",
           style: GoogleFonts.raleway(
             fontSize: 18,
             fontWeight: FontWeight.w700,
             color: Colors.white,
-            letterSpacing: .75,
+
           ),
         ),
         actions: [
@@ -34,6 +35,78 @@ class _AboutScreenState extends State<AboutScreen> {
           )
         ],
 
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              InkWell(
+                splashColor: Colors.grey,
+                onTap: (){
+
+                },
+                child: const TextButtonComponent(
+                  fontSize: 15,
+                  label: "Church Beliefs",
+                  borderRadius: 8,
+                  labelColor: MAIN_COLOR,
+                  textColor: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  buttonHeight: 54,
+                ),
+              ),
+              SizedBox(height: 5,),
+              InkWell(
+                splashColor: Colors.grey,
+                onTap: (){
+
+                },
+                child: const TextButtonComponent(
+                  fontSize: 15,
+                  label: "Our History",
+                  borderRadius: 8,
+                  labelColor: MAIN_COLOR,
+                  textColor: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  buttonHeight: 54,
+                ),
+              ),
+              SizedBox(height: 5,),
+              InkWell(
+                splashColor: Colors.grey,
+                onTap: (){
+
+                },
+                child: const TextButtonComponent(
+                  fontSize: 15,
+                  label: "Church Administration",
+                  borderRadius: 8,
+                  labelColor: MAIN_COLOR,
+                  textColor: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  buttonHeight: 54,
+                ),
+              ),
+              SizedBox(height: 5,),
+              InkWell(
+                splashColor: Colors.grey,
+                onTap: (){
+
+                },
+                child: const TextButtonComponent(
+                  fontSize: 15,
+                  label: "Gallery",
+                  borderRadius: 8,
+                  labelColor: MAIN_COLOR,
+                  textColor: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  buttonHeight: 54,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
