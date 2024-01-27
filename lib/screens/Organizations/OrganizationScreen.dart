@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rmcapp/screens/Organizations/OrgDetailsScreen.dart';
 import '../../Constants/myColors.dart';
 
 class OrganizationScreen extends StatefulWidget {
@@ -43,7 +44,7 @@ class _OrganizationScreenState extends State<OrganizationScreen> {
             children: [
               GestureDetector(
                 onTap: (){
-                  
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>OrgDetailsScreen()));
                 },
                 child: Card(
                   child: Container(
@@ -77,7 +78,7 @@ class _OrganizationScreenState extends State<OrganizationScreen> {
                   ),
                 ),
               ),
-             
+
 
             ],
           ),

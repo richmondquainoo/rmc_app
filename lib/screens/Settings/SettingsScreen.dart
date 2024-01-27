@@ -200,41 +200,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
                 child: Column(children: [
                   SettingCardComponent(
-                    title: "Gallery",
-                    leadingIcon: Icons.image,
-                    bgIconColor: Colors.amber,
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => OrderScreen(
-                      //       showBackButton: true,
-                      //     ),
-                      //   ),
-                      // );
-                    },
-                  ),
-                ]),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 14.0, right: 14, bottom: 10),
-              child: Container(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Theme.of(context).cardColor,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Theme.of(context).shadowColor.withOpacity(0.1),
-                      spreadRadius: 1,
-                      blurRadius: 1,
-                      offset: const Offset(0, 1), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Column(children: [
-                  SettingCardComponent(
                     title: "Announcement",
                     leadingIcon: Icons.speaker_group_rounded,
                     bgIconColor: Colors.amber,
