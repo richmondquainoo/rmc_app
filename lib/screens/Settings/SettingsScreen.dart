@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:rmcapp/screens/Organizations/OrganizationScreen.dart';
 import '../../Components/settingCardComponent.dart';
 import '../../Constants/myColors.dart';
 class SettingsScreen extends StatefulWidget {
@@ -135,44 +136,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 ],
                               ),
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //     builder: (context) => EditProfileScreen(),
-                                //   ),
-                                // );
-                              },
-                              child: Container(
-                                height: 27,
-                                width: 75,
-                                decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Edit",
-                                      style: GoogleFonts.raleway(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 14,
-                                          color: Colors.white),
-                                    ),
-                                    const SizedBox(
-                                      width: 6,
-                                    ),
-                                    const Icon(
-                                      Icons.edit,
-                                      size: 20,
-                                      color: Colors.white,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
                           ],
                         ),
                       ],
@@ -202,8 +165,78 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
                 child: Column(children: [
                   SettingCardComponent(
+                    title: "Organization",
+                    leadingIcon: Icons.account_tree_sharp,
+                    bgIconColor: Colors.amber,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const OrganizationScreen(
+
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ]),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14.0, right: 14, bottom: 10),
+              child: Container(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Theme.of(context).cardColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Theme.of(context).shadowColor.withOpacity(0.1),
+                      spreadRadius: 1,
+                      blurRadius: 1,
+                      offset: const Offset(0, 1), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Column(children: [
+                  SettingCardComponent(
                     title: "Gallery",
-                    leadingIcon: Icons.card_giftcard_outlined,
+                    leadingIcon: Icons.image,
+                    bgIconColor: Colors.amber,
+                    onTap: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => OrderScreen(
+                      //       showBackButton: true,
+                      //     ),
+                      //   ),
+                      // );
+                    },
+                  ),
+                ]),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14.0, right: 14, bottom: 10),
+              child: Container(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Theme.of(context).cardColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Theme.of(context).shadowColor.withOpacity(0.1),
+                      spreadRadius: 1,
+                      blurRadius: 1,
+                      offset: const Offset(0, 1), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Column(children: [
+                  SettingCardComponent(
+                    title: "Announcement",
+                    leadingIcon: Icons.speaker_group_rounded,
                     bgIconColor: Colors.amber,
                     onTap: () {
                       // Navigator.push(

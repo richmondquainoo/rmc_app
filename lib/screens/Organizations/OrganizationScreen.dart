@@ -77,40 +77,7 @@ class _OrganizationScreenState extends State<OrganizationScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 6,),
-              Card(
-                child: Container(
-                  // height: 80,
-
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color:Colors.white,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 4.0),
-                        child: Center(
-                            child: Image.asset("assets/images/flier.png")
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Center(
-                          child: Text(
-                            "Men's Fellowship",
-                            style: GoogleFonts.raleway(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ),
-                      ),
-
-                    ],
-                  ),
-                ),
-              ),
+             
 
             ],
           ),
